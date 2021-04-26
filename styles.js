@@ -47,4 +47,16 @@ export const gridSystem = StyleSheet.create({
     borderBottomWidth: 1,
     marginVertical: 24,
   },
+  absoluteFull: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+  },
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.pink,
+  },
 });

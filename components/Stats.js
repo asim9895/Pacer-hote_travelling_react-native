@@ -5,6 +5,10 @@ import { Feather, Entypo } from '@expo/vector-icons';
 
 const starColors = ['#e3ab53', '#e3ab53', '#e3ab53', '#e3ab53', '#8b6f3a'];
 
+const Circle = (props) => {
+  return <View style={[styles.circle, props.style]} />;
+};
+
 const Stats = () => {
   return (
     <View style={styles.container}>
@@ -37,6 +41,18 @@ const Stats = () => {
           })}
         </View>
       </View>
+
+      <View style={styles.circleContainer}>
+        <Circle
+          style={{ backgroundColor: '#999', marginRight: -10, zIndex: 3 }}
+        />
+        <Circle
+          style={{ backgroundColor: '#999', marginRight: -10, zIndex: 3 }}
+        />
+        <Circle
+          style={{ backgroundColor: '#999', marginRight: -10, zIndex: 3 }}
+        />
+      </View>
     </View>
   );
 };
@@ -64,5 +80,17 @@ const styles = StyleSheet.create({
     color: colors.textSec,
     fontSize: 10,
     fontWeight: '800',
+  },
+  circleContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  },
+  circle: {
+    width: 36,
+    height: 36,
+    borderColor: colors.lightBg,
+    borderRadius: 36 / 2,
+    borderWidth: 2,
   },
 });
